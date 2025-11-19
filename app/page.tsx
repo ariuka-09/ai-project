@@ -3,6 +3,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { json } from "stream/consumers";
+import { ImageRecognizer } from "./_components/ImageRecognizer";
 
 type User = {
   name: string;
@@ -40,7 +41,7 @@ export default function Home() {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <form action="" onSubmit={generateImage}>
           <input type="text" name="prompt" />
           <button type="submit">
@@ -50,7 +51,8 @@ export default function Home() {
       </div>
       <div>
         <img src={imageUrl} alt="" />
-      </div>
+      </div> */}
+      <ImageRecognizer />
     </div>
   );
 }
