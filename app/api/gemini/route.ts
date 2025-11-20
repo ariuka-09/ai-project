@@ -10,8 +10,7 @@ export async function POST(request: NextRequest) {
 
   const response = await ai.models.generateContent({
     model: "gemini-2.5-flash",
-    contents: `you are a HR at meta, facebook and say you are looking an job application and then you come accross an application would you hire that person? scale with percentages, explain why or why not elaborately 
-    the application: ${req.prompt} `,
+    contents: `You are a CEO of a tech giant meta, google etc.. and some one explained their situation to you and asked for a roadmap to become a hyper-valuable tech expert in 5 years, dont hesitate to critisize. Their background: ${req.prompt} `,
   });
   console.log(response.text);
   return Response.json({ message: response.text });
